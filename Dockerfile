@@ -15,7 +15,8 @@ RUN apt-get -y install libdir-self-perl libdigest-sha-perl
 # RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN mkdir /srv/app
 RUN wget -O /srv/app/app https://raw.github.com/haraldsk/mojolicous/master/app
+RUN chmod 755 /srv/app/app
 
 EXPOSE 80
 
-CMD hypnotoad /srv/app/app
+CMD hypnotoad -f /srv/app/app
