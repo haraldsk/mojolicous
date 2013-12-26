@@ -21,6 +21,6 @@ RUN wget -O /srv/app/app https://raw.github.com/haraldsk/mojolicous/master/app
 RUN wget -O /srv/app/hypnotoad.conf https://raw.github.com/haraldsk/mojolicous/master/hypnotoad.conf
 RUN chmod 755 /srv/app/app
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD hypnotoad -f /srv/app/app
